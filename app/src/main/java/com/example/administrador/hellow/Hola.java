@@ -1,7 +1,6 @@
 package com.example.administrador.hellow;
 
 import android.app.Activity;
-import android.inputmethodservice.KeyboardView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,8 +18,7 @@ public class Hola extends Activity {
         Button boomButton =(Button) findViewById(R.id.button);
         boomButton.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v){
-                System.out.println("JEJEJEJ");
-
+                System.out.println("PUSH PULL");
             }
         } );
 
