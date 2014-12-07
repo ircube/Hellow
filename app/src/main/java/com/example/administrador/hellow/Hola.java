@@ -6,6 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 
 
 public class Hola extends Activity {
@@ -15,13 +18,24 @@ public class Hola extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hola);
 
+
         Button boomButton =(Button) findViewById(R.id.button);
         boomButton.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v){
-                System.out.println("PUSH PULL");
+                changeField2Content();
             }
         } );
+    }
 
+    public boolean changeField2Content() {
+
+        EditText field1 = (EditText) findViewById(R.id.field1);
+        String s1 = field1.getText().toString();
+
+        TextView field2 = (TextView) findViewById(R.id.field2);
+        //String s2 = field1.getText().toString();
+        field2.setText(s1);
+        return true;
     }
 
 
@@ -42,6 +56,7 @@ public class Hola extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+
     }
 
 
