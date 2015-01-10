@@ -4,6 +4,10 @@
     <string name="app_name">Hellow</string>
     <string name="hello_world">yeeee</string>
     <string name="action_settings">Settings</string>
-    <string name="andrea">andrea</string>
     <string name="seg">seg</string>
+    <string name="menu1">opcion1</string>
+    <string name="menu2">opcion2</string>
+    <string name="app_segundo">Segundo</string>
+    <string name="title_activity_segundo">segundo</string>
+
 </resources>

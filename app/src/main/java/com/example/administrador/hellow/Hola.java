@@ -25,17 +25,21 @@ public class Hola extends Activity {
                 changeField2Content();
             }
         } );
+        Button boomButton2 =(Button) findViewById(R.id.button2);
+        boomButton2.setOnClickListener( new View.OnClickListener(){
+            public void onClick(View v){
+                setContentView(R.layout.activity_segundo);
+            }
+        } );
     }
 
-    public boolean changeField2Content() {
-
+    public void changeField2Content() {
         EditText field1 = (EditText) findViewById(R.id.field1);
         String s1 = field1.getText().toString();
 
         TextView field2 = (TextView) findViewById(R.id.field2);
         //String s2 = field1.getText().toString();
         field2.setText(s1);
-        return true;
     }
 
 
@@ -53,8 +57,24 @@ public class Hola extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            System.out.println("sin opciones :D");
             return true;
         }
+
+        if (id == R.id.m1) {
+            String ss =(String) item.getTitle();
+            System.out.println("Es la opcion: " + ss);
+            return true;
+        }
+
+        if (id == R.id.m2) {
+            String ss =(String) item.getTitle();
+            System.out.println("Es la opcion: " + ss );
+            return true;
+        }
+
+
+
         return super.onOptionsItemSelected(item);
     }
 }
